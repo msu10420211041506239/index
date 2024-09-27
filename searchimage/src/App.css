@@ -57,14 +57,15 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* Space between images */
+  gap: 20px;
 }
 
 .image-item {
   display: flex;
-  flex-direction: column; /* Stack image and button */
-  align-items: center; /* Center align items */
-  max-width: 150px; /* Limit the width of each image item */
+  flex-direction: column; 
+  align-items: center;
+  max-width: 150px; 
+  flex: 1 1 150px; 
 }
 
 img {
@@ -81,4 +82,40 @@ img {
   border-radius: 4px;
   margin: 20px auto;
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  #ab {
+    flex-direction: column; 
+  }
+
+  #cd {
+    width: 100%; 
+    margin-bottom: 10px; 
+  }
+
+  #searchButton {
+    width: 100%; 
+  }
+
+  .image-item {
+    max-width: 100px; 
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px; 
+  }
+
+  #cd {
+    font-size: 16px; 
+  }
+
+  #searchButton {
+    font-size: 16px; 
+  }
+
+  #showmore {
+    padding: 8px 16px; 
+  }
 }
